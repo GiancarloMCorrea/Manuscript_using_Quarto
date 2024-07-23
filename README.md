@@ -41,5 +41,5 @@ You can always edit the generated Word document as you wish before submitting yo
 
 There are two main options to manage your citations in Quarto. 
 
-1. Using a reference manager like Zotero. You can find a tutorial to link Quarto with Zotero here. The `manuscript.qmd` file was written using this approach.
+1. Using a reference manager like Zotero. You can find a tutorial to link Quarto with Zotero [here](https://giancarlomcorrea.netlify.app/post/zotero-and-quarto/). The `manuscript.qmd` file was written using this approach.
 2. Using [CiteDrive](https://www.citedrive.com/en/), which is quite efficient based on my experience. You could find a tutorial to use CiteDrive and Quarto [here](https://www.citedrive.com/en/quarto/). You will need to slightly modify the `manuscript.qmd` to use this approach.

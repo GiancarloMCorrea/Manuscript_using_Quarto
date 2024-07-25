@@ -12,6 +12,8 @@ In this repository, you will find the following files/folders:
 - `manuscript.qmd`: Quarto file where you will write your manuscript. 
 - `references.bib`: Bibtex file where your citations information will be stored. You **do not** need to edit this file manually, it will be updated automatically. See more below.
 
+This repository was tested using Quarto 1.5.55 (Windows).
+
 ## How to start writing my manuscript?
 
 Clone this repository and make changes to the `manuscript.qmd` file. It will generate a Word file (`manuscript.docx`) when rendered.
@@ -32,6 +34,7 @@ Clone this repository and make changes to the `manuscript.qmd` file. It will gen
 - You will always need to make edits in the Quarto file. So, tracked changes or comments in Word from collaborators cannot be saved.
 - Producing elaborated tables is not efficient when generating Word documents using Quarto. So you will only be able to make simple tables (as far as I know).
 - You will need to produce your figures as PNG files since that format works better (figure dimensions are mantained) when producing Word files from Quarto. 
+- I could not find a way to cross reference supplementary tables, so that is not currently possible. You will need to do it manually or have a separate Word file.
 
 ## Tips
 

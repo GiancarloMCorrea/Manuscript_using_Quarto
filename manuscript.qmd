@@ -25,6 +25,14 @@ format:
     number-sections: false
     reference-doc: custom-reference-doc.docx
 editor: source
+crossref:
+  custom:
+    - key: suppfig
+      kind: float
+      latex-env: suppfig
+      reference-prefix: Figure S
+      space-before-numbering: false
+      latex-list-of-description: Supplementary Figure
 bibliography: references.bib
 ---
 
@@ -47,7 +55,7 @@ require(rbbt)
 require(this.path)
 qmd_file = this.path()
 keys = rbbt::bbt_detect_citations(qmd_file)
-bbt_ignore = keys[grepl("fig-|tbl-|eq-|sec-", keys)] # ignore these patterns as citations
+bbt_ignore = keys[grepl("fig-|tbl-|eq-|sec-|suppfig-", keys)] # ignore these patterns as citations
 rbbt::bbt_update_bib(path_rmd = qmd_file, 
                      ignore = bbt_ignore, overwrite = T, translator = "bibtex")
 # It is important that your labels for figures, tables, equations, and sections start with 'eq-', 'tbl-', 'eq-', and 'sec-', respectively.
@@ -96,11 +104,13 @@ See also @eq-rec.
 
 Write the results. See the image @fig-1. And also see @tbl-example.
 
+This is a @suppfig-1.
+
 \newpage
 
 # Discussion
 
-Write the discussion.
+Write the discussion. See @supptbl-exam.
 
 # Acknowledgements
 
@@ -128,3 +138,7 @@ kable(my_table)
 # Figures
 
 ![Add the image caption here.](images/IO_zones.png){#fig-1}
+
+# Supplementary information: Figures
+
+![Add the supplementary image caption here.](images/Figure_S1.png){#suppfig-1}

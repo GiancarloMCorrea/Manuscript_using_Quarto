@@ -35,6 +35,7 @@ Clone this repository and make changes to the `manuscript.qmd` file. It will gen
 - Producing elaborated tables is not efficient when generating Word documents using Quarto. So you will only be able to make simple tables (as far as I know).
 - You will need to produce your figures as PNG files since that format works better (figure dimensions are mantained) when producing Word files from Quarto. 
 - I could not find a way to cross reference supplementary tables, so that is not currently possible. You will need to do it manually or have a separate Word file.
+- Word is not the prefered output format of Quarto, it has more limited options compared to HTML or PDFs.
 
 ## Tips
 

@@ -47,3 +47,7 @@ There are two main options to manage your citations in Quarto.
 
 1. Using a reference manager like Zotero. You can find a tutorial to link Quarto with Zotero [here](https://giancarlomcorrea.netlify.app/post/zotero-and-quarto/). The `manuscript.qmd` file was written using this approach.
 2. Using [CiteDrive](https://www.citedrive.com/en/), which is quite efficient based on my experience. You could find a tutorial to use CiteDrive and Quarto [here](https://www.citedrive.com/en/quarto/). You will need to slightly modify the `manuscript.qmd` to use this approach.
+
+## Submitting a revised manuscript
+
+If you need to work on the reviewers' comments and track your changes, you can do it following [these instructions](https://openplantpathology.org/posts/2022-08-18-tracking-changes-from-rmdqmd-output-across-word-document-versions/). This uses the *Compare* tool in Word.

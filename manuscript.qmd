@@ -33,6 +33,12 @@ crossref:
       reference-prefix: Figure S
       space-before-numbering: false
       latex-list-of-description: Supplementary Figure
+    - kind: float
+      key: supptbl
+      latex-env: supptbl
+      reference-prefix: Table S
+      space-before-numbering: false
+      latex-list-of-description: Supplementary Table
 bibliography: references.bib
 ---
 
@@ -55,7 +61,7 @@ require(rbbt)
 require(this.path)
 qmd_file = this.path()
 keys = rbbt::bbt_detect_citations(qmd_file)
-bbt_ignore = keys[grepl("fig-|tbl-|eq-|sec-|suppfig-", keys)] # ignore these patterns as citations
+bbt_ignore = keys[grepl("fig-|tbl-|eq-|sec-|suppfig-|supptbl-", keys)] # ignore these patterns as citations
 rbbt::bbt_update_bib(path_rmd = qmd_file, 
                      ignore = bbt_ignore, overwrite = T, translator = "bibtex")
 # It is important that your labels for figures, tables, equations, and sections start with 'eq-', 'tbl-', 'eq-', and 'sec-', respectively.
@@ -104,13 +110,13 @@ See also @eq-rec.
 
 Write the results. See the image @fig-1. And also see @tbl-example.
 
-This is a @suppfig-1.
+This is a @suppfig-1. This is a @supptbl-1.
 
 \newpage
 
 # Discussion
 
-Write the discussion. See @supptbl-exam.
+Write the discussion.
 
 # Acknowledgements
 
@@ -132,12 +138,29 @@ my_table = read_xlsx('tables/table_example.xlsx')
 kable(my_table)
 ```
 
-
 \newpage
 
 # Figures
 
 ![Add the image caption here.](images/IO_zones.png){#fig-1}
+
+\newpage
+
+# Supplementary information: Tables
+
+::: {#supptbl-1}
+
+| Col1 | Col2 | Col3 |
+|------|------|------|
+| A    | B    | C    |
+| E    | F    | G    |
+| A    | G    | G    |
+
+: My Caption
+
+:::
+
+\newpage
 
 # Supplementary information: Figures
 
